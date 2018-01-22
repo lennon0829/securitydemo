@@ -1,0 +1,4 @@
+swagger:  http://localhost:8080/hupo/swagger-ui.html
+index:    http://localhost:8080/hupo/
+register: http://localhost:8080/hupo/register
+login:    http://localhost:8080/hupo/login
