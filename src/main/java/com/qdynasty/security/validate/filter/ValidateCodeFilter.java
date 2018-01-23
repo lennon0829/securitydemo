@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.qdynasty.constants.SecurityConfigProperties;
+import com.qdynasty.constants.AppConstants;
 import com.qdynasty.exception.ValidateCodeException;
 import com.qdynasty.security.validate.ValidateCodeProcessorManager;
 import com.qdynasty.security.validate.enums.ValidateCodeType;
@@ -39,17 +39,14 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 	private AuthenticationFailureHandler appAuthenticationfailureHandler;
 
 	@Autowired
-	private SecurityConfigProperties securityConfigProperties;
-
-	@Autowired
 	private ValidateCodeProcessorManager validateCoderProcessManager;
 
 	@Override
 	public void afterPropertiesSet() throws ServletException {
 		super.afterPropertiesSet();
 
-		urlMap.put(securityConfigProperties.getDefaultSignInProcessingUrlForm(), ValidateCodeType.IMAGE);
-		urlMap.put(securityConfigProperties.getDefaultSignInProcessingUrlMobile(), ValidateCodeType.SMS);
+		urlMap.put(AppConstants.DEFAULT_SIGN_IN_PROCESSING_URL_FORM, ValidateCodeType.IMAGE);
+		urlMap.put(AppConstants.DEFAULT_SIGN_IN_PROCESSING_URL_MOBILE, ValidateCodeType.SMS);
 	}
 
 	@Override

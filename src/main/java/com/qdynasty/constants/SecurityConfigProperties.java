@@ -34,36 +34,6 @@ public class SecurityConfigProperties {
 	private int rememberMeTime;
 
 	/**
-	 * 当请求需要身份验证时跳转URL
-	 */
-	@Value("${com.qdynasty.security.DEFAULT_UNAUTHENTICATION_URL}")
-	private String defaultUnauthenticationUrl;
-
-	/**
-	 * 默认的用户名密码登录请求处理url
-	 */
-	@Value("${com.qdynasty.security.DEFAULT_SIGN_IN_PROCESSING_URL_FORM}")
-	private String defaultSignInProcessingUrlForm;
-
-	/**
-	 * 默认的手机验证码登录请求处理url
-	 */
-	@Value("${com.qdynasty.security.DEFAULT_SIGN_IN_PROCESSING_URL_MOBILE}")
-	private String defaultSignInProcessingUrlMobile;
-
-	/**
-	 * 默认的手机验证码登录请求处理url
-	 */
-	@Value("${com.qdynasty.security.DEFAULT_SIGN_IN_URL_MOBILE_PAGE}")
-	private String defaultSignInUrlMobilePage;
-
-	/**
-	 * 默认的用户注册请求处理url
-	 */
-	@Value("${com.qdynasty.security.DEFAULT_REGISTER_URL}")
-	private String defaultRegisterUrl;
-
-	/**
 	 * weixin appID
 	 */
 	@Value("${com.qdynasty.security.DEFAULT_SOCIAL_WEIXIN_APP_ID}")

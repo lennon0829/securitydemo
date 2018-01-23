@@ -1,4 +1,4 @@
-package cn.merryyou.logback.utils;
+package com.qdynasty.util;
 
 import com.qdynasty.model.Result;
 
@@ -9,20 +9,20 @@ import com.qdynasty.model.Result;
  * @since 1.0
  */
 public class ResultUtil {
-    public static Result success(Object object) {
-        Result result = new Result();
+    public static Result<Object> success(Object object) {
+        Result<Object> result = new Result<Object>();
         result.setCode(0);
         result.setMsg("成功");
         result.setData(object);
         return result;
     }
 
-    public static Result success() {
+    public static Result<Object> success() {
         return success(null);
     }
 
-    public static Result error(Integer code, String msg) {
-        Result result = new Result();
+    public static Result<Object> error(Integer code, String msg) {
+        Result<Object> result = new Result<Object>();
         result.setCode(code);
         result.setMsg(msg);
         return result;

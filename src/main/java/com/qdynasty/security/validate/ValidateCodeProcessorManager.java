@@ -23,7 +23,7 @@ public class ValidateCodeProcessorManager {
 	public ValidateCodeProcessor findValidateCodeProcessor(String type) throws ValidateCodeException {
 
 		//imageValidateCodeProcessor
-		String name = StringUtils.lowerCase(type) + ValidateCodeProcessor.class.getName();
+		String name = StringUtils.lowerCase(type) + ValidateCodeProcessor.class.getSimpleName();
 
 		ValidateCodeProcessor validateCodeProcessor = validateCodeProcessors.get(name);
 

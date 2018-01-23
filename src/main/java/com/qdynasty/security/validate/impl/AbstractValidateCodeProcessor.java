@@ -59,9 +59,8 @@ public abstract class AbstractValidateCodeProcessor implements ValidateCodeProce
 	}
 
 	private String getType() {
-		// imageValidateCodeProcessor
-		String type = StringUtils.substringBefore(this.getClass().getSimpleName(),
-				this.getClass().getInterfaces().getClass().getSimpleName());
+		// ImageCodeProcessor
+		String type = StringUtils.substringBefore(this.getClass().getSimpleName(), "CodeProcessor");
 		log.info("type=" + type);
 		return type;
 	}
@@ -107,7 +106,7 @@ public abstract class AbstractValidateCodeProcessor implements ValidateCodeProce
 
 	private ValidateCode generate(HttpServletRequest request, String type) throws Exception {
 
-		String name = StringUtils.lowerCase(type) + ValidateCodeGenerator.class.getName();
+		String name = StringUtils.lowerCase(type) + ValidateCodeGenerator.class.getSimpleName();
 
 		ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(name);
 

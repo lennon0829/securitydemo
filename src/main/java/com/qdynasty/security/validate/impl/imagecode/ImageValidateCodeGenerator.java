@@ -26,7 +26,7 @@ import cn.hutool.core.util.RandomUtil;
  *
  */
 @Component
-public class ImageCodeGenerator implements ValidateCodeGenerator {
+public class ImageValidateCodeGenerator implements ValidateCodeGenerator {
 
 	@Autowired
 	private SecurityConfigProperties securityConfigProperties;
